@@ -3,6 +3,7 @@ console.log('loaded correctly!')
 const height = 1200
 const width = 1200
 const pixel = 30
+const fps = 15
 
 function randomColor() {
     return Math.floor(Math.random() * 255)
@@ -13,6 +14,10 @@ function randomPos() {
         x: Math.floor(Math.random() * (width / pixel)),
         y: Math.floor(Math.random() * (height / pixel))
     }
+}
+
+function play() {
+    setInterval(draw, 1000/fps)
 }
 
 function draw() {
